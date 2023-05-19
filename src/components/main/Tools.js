@@ -1,5 +1,5 @@
 import { getAuth, signOut as out } from 'firebase/auth';
-import { useContext, useState, useCallback, useMemo } from 'react';
+import { useCallback, useContext, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import basket from '../../assets/primary/basket.svg';
 import exit from '../../assets/primary/exit.svg';

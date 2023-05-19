@@ -1,3 +1,5 @@
+@import vars
+
 .articles
 	max-width: 259px
 	&-top
@@ -5,32 +7,32 @@
 		gap: 108px
 		align-items: center
 	&-btn
-		width: 50px
-		height: 50px
-		background: #F3F3F3
-		border-radius: 15px
+		width: $btn-width
+		height: $btn-height
+		background: $btn-background
+		border-radius: $br-15
 		border: none
 		cursor: pointer
-		transition: 1s ease
+		transition: $btn-transition
 
 		&:hover
-			background: #666666
+			background: $btn-hoverBackGr
 
 	&-item-imgBox_yellow
-		background: #FFF0A5
-		border-radius: 15px
+		background: $imgBox-yellow
+		border-radius: $br-15
 
 	&-item-imgBox_blue
 		background: #D6F5FF
-		border-radius: 15px
+		border-radius: $br-15
 
 	&-item-imgBox_pink
 		background: #FFDDF0
-		border-radius: 15px
+		border-radius: $br-15
 
 	&-item-imgBox_aquamarine
 		background: #C1FFF4
-		border-radius: 15px
+		border-radius: $br-15
 
 	&-item
 		display: grid
@@ -64,8 +66,8 @@
 		padding: 4px 9px 5px 7px
 		display: inline-flex
 		background: #FFF8D5
-		border: 1px solid #FFFFFF
-		border-radius: 15px
+		border: 1px solid $bright-white
+		border-radius: $br-15
 		gap: 0 8px
 		margin-left: -6px
 		p

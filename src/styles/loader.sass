@@ -1,3 +1,7 @@
+@import vars
+$backDiv: #e2ebfb
+$cubic: cubic-bezier(0.42, 0, 0.58, 1)
+
 @keyframes split
 	0%
 		opacity: 1
@@ -27,11 +31,11 @@
 	top: 0
 	left: 0
 	width: 100%
-	background: transparent
+	background: $clear
 	border-radius: 40px
 
 	&-content
-		animation: split 3.25s cubic-bezier(0.42, 0, 0.58, 1)
+		animation: split 3.25s $cubic
 
 	&-right
 		position: absolute
@@ -39,10 +43,10 @@
 		width: 50%
 		right: 0
 		top: 0
-		background: #e2ebfb
+		background: $backDiv
 		border-top-right-radius: 40px
 		border-bottom-right-radius: 40px
-		animation: slideRight 1.6s cubic-bezier(0.42, 0, 0.58, 1)
+		animation: slideRight 1.6s $cubic
 		animation-delay: 1.3s
 
 	&-left
@@ -51,10 +55,10 @@
 		width: 50%
 		left: 0
 		top: 0
-		background: #e2ebfb
+		background: $backDiv
 		border-top-left-radius: 40px
 		border-bottom-left-radius: 40px
-		animation: slideLeft 1.6s cubic-bezier(0.42, 0, 0.58, 1)
+		animation: slideLeft 1.6s $cubic
 		animation-delay: 1.3s
 
 	&-title

@@ -3,10 +3,13 @@
 @import articles
 @import menu
 @import basket
+@import vars
+
+$primaryBtn-back: #F3F3F3
 
 .primary
 	max-width: 1121px
-	background: #fff
+	background: $white
 	border-radius: 35px
 	padding: 50px 55px 27px
 	position: relative
@@ -23,38 +26,39 @@
 
 				&:active
 					.basket-img
-						stroke: #fff
+						stroke: $white
 
 			.exit-btn, .basket-btn
 				width: 50px
 				height: 50px
-				background: #F3F3F3
-				border-radius: 15px
+				background: $primaryBtn-back
+				border-radius: $br-15
 				border: none
 				cursor: pointer
-				transition: 1s ease
+				transition: $btn-transition
 
 				&:hover
-					background: #666666
+					background: $btn-hoverBackGr
 
 			.search
 				position: relative
 				margin-right: 8px
 
-				input
+				&-input
 					padding: 15px
 					width: 50px
 					height: 50px
-					background: #F3F3F3
+					background: $primaryBtn-back
 					border-radius: 15px
 					border: none
 					outline: none
 					cursor: pointer
-					transition: 1s ease
+					transition: $btn-transition
 					&:focus
+						padding: 15px 45px 15px 15px
 						width: 250px
-						background: #666666
-						color: #fff
+						background: $btn-hoverBackGr
+						color: $white
 
 				&-img
 					position: absolute
