@@ -1,0 +1,89 @@
+$border-radius: 35px
+$form-padding-top: 77px
+$form-padding-bottom: 54px
+$input-width: 388px
+$input-background: #F3F3F3
+$input-border-radius: 15px
+$placeholder-color: #CC9696
+$button-width: 163px
+$button-padding: 16px 60px
+
+.auth-page_container
+	padding: 100px 0 250px
+
+.auth-form
+	background-color: #fff
+	border-radius: $border-radius
+	max-width: 578px
+	margin: 0 auto
+	padding: $form-padding-top 0 $form-padding-bottom
+
+	&_label
+		display: block
+		max-width: $input-width
+		margin: 0 auto 16px
+
+	&_error
+		font-size: 12px
+		line-height: 18px
+		color: red
+
+	&_span
+		font-weight: 700
+		font-size: 12px
+		line-height: 18px
+		display: block
+		text-align: start
+
+	&_input
+		padding: 16px 13px
+		width: $input-width
+		background: $input-background
+		border: none
+		border-radius: $input-border-radius
+		font-size: 12px
+		line-height: 18px
+
+		&::placeholder
+			font-weight: 700
+			font-size: 11px
+			line-height: 18px
+			color: $placeholder-color
+
+	&_btn
+		display: block
+		margin: 21px auto 10px
+		color: #fff
+		background: #2D9CDB
+		border-radius: $input-border-radius
+		width: $button-width
+		border: none
+		padding: $button-padding
+		font-weight: 700
+		font-size: 14px
+		line-height: 18px
+
+	&_link
+		font-weight: 700
+		font-size: 12px
+		line-height: 18px
+		color: #000000
+
+.grapes
+	position: absolute
+	top: 0
+	left: 0
+.apple
+	position: absolute
+	bottom: 100px
+	left: 80px
+
+.orange
+	position: absolute
+	bottom: 0
+	right: 0
+
+.leaf
+	position: absolute
+	top: 0
+	right: 0

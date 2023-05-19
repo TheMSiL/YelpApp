@@ -1,0 +1,70 @@
+@import food-nav
+@import discount
+@import articles
+@import menu
+@import basket
+
+.primary
+	max-width: 1121px
+	background: #fff
+	border-radius: 35px
+	padding: 50px 55px 27px
+	position: relative
+
+	&-header
+		display: flex
+		justify-content: space-between
+
+		&-tools
+			display: flex
+
+			.basket-btn
+				margin-right: 24px
+
+				&:active
+					.basket-img
+						stroke: #fff
+
+			.exit-btn, .basket-btn
+				width: 50px
+				height: 50px
+				background: #F3F3F3
+				border-radius: 15px
+				border: none
+				cursor: pointer
+				transition: 1s ease
+
+				&:hover
+					background: #666666
+
+			.search
+				position: relative
+				margin-right: 8px
+
+				input
+					padding: 15px
+					width: 50px
+					height: 50px
+					background: #F3F3F3
+					border-radius: 15px
+					border: none
+					outline: none
+					cursor: pointer
+					transition: 1s ease
+					&:focus
+						width: 250px
+						background: #666666
+						color: #fff
+
+				&-img
+					position: absolute
+					top: 15px
+					right: 15px
+					cursor: pointer
+
+	&-middle
+		margin: 28px 0 30px 0
+
+	&-middle, &-footer
+		display: flex
+		gap: 72px

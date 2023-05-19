@@ -1,0 +1,102 @@
+@keyframes split
+	0%
+		opacity: 1
+
+	100%
+		opacity: 0
+
+@keyframes slideRight
+	0%
+		transform: translateX(0)
+
+	100%
+		transform: translateX(60%)
+
+@keyframes slideLeft
+	0%
+		transform: translateX(0)
+
+	100%
+		transform: translateX(-60%)
+
+.loader
+	padding-top: 400px
+	height: 97vh
+	position: absolute
+	z-index: 99
+	top: 0
+	left: 0
+	width: 100%
+	background: transparent
+	border-radius: 40px
+
+	&-content
+		animation: split 3.25s cubic-bezier(0.42, 0, 0.58, 1)
+
+	&-right
+		position: absolute
+		height: 100%
+		width: 50%
+		right: 0
+		top: 0
+		background: #e2ebfb
+		border-top-right-radius: 40px
+		border-bottom-right-radius: 40px
+		animation: slideRight 1.6s cubic-bezier(0.42, 0, 0.58, 1)
+		animation-delay: 1.3s
+
+	&-left
+		position: absolute
+		height: 100%
+		width: 50%
+		left: 0
+		top: 0
+		background: #e2ebfb
+		border-top-left-radius: 40px
+		border-bottom-left-radius: 40px
+		animation: slideLeft 1.6s cubic-bezier(0.42, 0, 0.58, 1)
+		animation-delay: 1.3s
+
+	&-title
+		font-weight: 800
+		font-size: 72px
+		line-height: 65px
+		margin-bottom: 28px
+		position: relative
+
+	&-text
+		font-weight: 800
+		font-size: 24px
+		line-height: 65px
+		animation: split 2s ease-in
+		position: relative
+
+	&-grapes
+		position: absolute
+		bottom: 140px
+		left: 440px
+
+	&-apple
+		position: absolute
+		top: 312px
+		right: 630px
+
+	&-orange
+		position: absolute
+		top: 350px
+		right: 580px
+
+	&-fire
+		position: absolute
+		top: 320px
+		right: 592px
+
+	&-burger
+		position: absolute
+		top: 230px
+		right: 400px
+
+	&-cheese
+		position: absolute
+		top: 390px
+		right: 460px
