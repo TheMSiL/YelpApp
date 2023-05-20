@@ -1,9 +1,9 @@
-import { useContext, useState, useCallback } from 'react';
+import { useCallback, useState } from 'react';
+import useAppContext from '../../hooks/useAppContext';
 
-import { AppContext } from '../../context/DataContext';
 const BasketItem = props => {
 	const [quantity, setQuantity] = useState(1);
-	const { setBasketItems } = useContext(AppContext);
+	const { setBasketItems } = useAppContext();
 
 	const remove = useCallback(() => {
 		setBasketItems(prevItems =>
@@ -23,17 +23,44 @@ const BasketItem = props => {
 			return updatedItems;
 		});
 	}, [setBasketItems, props.name, quantity]);
+
+	const subtract = useCallback(() => {
+		if (quantity === 1) {
+			return;
+		}
+		setQuantity(prevQuantity => prevQuantity - 1);
+		setBasketItems(prevItems => {
+			const updatedItems = prevItems.map(item => {
+				if (item.name === props.name) {
+					return { ...item, quantity: quantity - 1 };
+				}
+				return item;
+			});
+			return updatedItems;
+		});
+	}, [setBasketItems, props.name, quantity]);
+
 	return (
 		<div className='basket-item'>
-			<div className='basket-item-imgBox' onClick={remove}>
+			<div className='basket-item-imgBox'>
 				<img src={props.src} alt='item' />
 			</div>
 			<div className='basket-item-info'>
 				<p className='basket-item-info-title'>{props.name}</p>
-				<button className='basket-item-info-btn' onClick={add}>
-					х{quantity}
-				</button>
+				<div className='basket-item-info-count'>
+					<button
+						className='basket-item-info-count-subtract'
+						onClick={subtract}
+					>
+						-
+					</button>
+					<p className='basket-item-info-count-num'>{quantity}</p>
+					<button className='basket-item-info-count-add' onClick={add}>
+						+
+					</button>
+				</div>
 				<p className='basket-item-info-amount'>${props.price}</p>
+				<button className='basket-item-info-delete' onClick={remove} />
 				<p className='basket-item-info-text'>{props.description}</p>
 			</div>
 		</div>

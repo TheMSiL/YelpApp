@@ -1,21 +1,19 @@
 import {
 	createUserWithEmailAndPassword,
-	getAuth,
 	signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { useFormik } from 'formik';
-import { useContext, useCallback, useMemo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useCallback, useMemo } from 'react';
+import { NavLink } from 'react-router-dom';
 import * as Yup from 'yup';
-import app from '../../base';
-import { AppContext } from '../../context/DataContext';
+import { auth } from '../../base';
+import useNav from '../../hooks/useNav';
+import useAppContext from '../../hooks/useAppContext';
 import CustomInput from './CustomInput';
 
-const auth = getAuth(app)
-
 const AuthForm = props => {
-	const navigate = useNavigate();
-	const { setCurrentUser, setShowLoader } = useContext(AppContext);
+	const { goTo } = useNav();
+	const { setCurrentUser, setShowLoader } = useAppContext();
 
 	const validationSchema = useMemo(
 		() =>
@@ -63,7 +61,7 @@ const AuthForm = props => {
 					await createUserWithEmailAndPassword(auth, email, password);
 					setTimeout(() => {
 						resetForm();
-						navigate('/login');
+						goTo('/login');
 					}, 3000);
 				} catch (error) {
 					console.log(error);
@@ -84,7 +82,7 @@ const AuthForm = props => {
 			}
 		},
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[navigate, props.isShown, setCurrentUser]
+		[goTo, props.isShown, setCurrentUser]
 	);
 
 	const {
@@ -161,11 +159,9 @@ const AuthForm = props => {
 				{props.isShown ? 'Register' : 'Login'}
 			</button>
 			{!props.isShown && (
-				<Link
-					className='auth-form_link'
-					to='/register'
-					children='don’t have an account'
-				/>
+				<NavLink className='auth-form_link' to='/register'>
+					don’t have an account
+				</NavLink>
 			)}
 		</form>
 	);

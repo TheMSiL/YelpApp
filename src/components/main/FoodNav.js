@@ -1,11 +1,11 @@
-import { useContext, useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
+import useAppContext from '../../hooks/useAppContext';
 import All from '../../assets/primary/food-nav/All.svg';
 import Burgers from '../../assets/primary/food-nav/Burgers.svg';
 import Donuts from '../../assets/primary/food-nav/Donuts.svg';
 import Drinks from '../../assets/primary/food-nav/Drinks.svg';
 import Pizza from '../../assets/primary/food-nav/Pizza.svg';
 import Salads from '../../assets/primary/food-nav/Salads.svg';
-import { AppContext } from '../../context/DataContext';
 import FoodNavItem from './FoodNavItem';
 
 export const foodItems = [
@@ -37,7 +37,7 @@ export const foodItems = [
 
 const FoodNav = () => {
 	const [activeItem, setActiveItem] = useState(foodItems[0]);
-	const { setCurrentDish } = useContext(AppContext);
+	const { setCurrentDish } = useAppContext();
 
 	const handleFindItem = useCallback(
 		name => {

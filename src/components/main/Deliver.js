@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import deliver from '../../assets/leftSide/deliver.svg';
+import { NavLink } from 'react-router-dom';
 import arrow from '../../assets/leftSide/arrow.svg';
+import deliver from '../../assets/leftSide/deliver.svg';
 
 const Deliver = () => {
 	return (
@@ -9,7 +9,9 @@ const Deliver = () => {
 			<div className='deliver-info'>
 				<p className='deliver-info_title'>Faster delivery!</p>
 				<p className='deliver-info_text'>Know more</p>
-				<Link to='/' children={<img src={arrow} alt='arrow' />} />
+				<NavLink to='/'>
+					<img src={arrow} alt='arrow' />
+				</NavLink>
 			</div>
 		</div>
 	);

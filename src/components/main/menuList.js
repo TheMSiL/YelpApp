@@ -63,7 +63,7 @@ export const menuList = [
 				type: 'Burgers',
 			},
 			{
-				name: 'Mushroom Swiss Burger',
+				name: 'Mushrooms Burger',
 				description: 'Beef patty with sautéed mushrooms and Swiss cheese',
 				price: 11,
 				img: mushroomSwissBurger,
@@ -77,7 +77,7 @@ export const menuList = [
 				type: 'Burgers',
 			},
 			{
-				name: 'Spicy Jalapeno Burger',
+				name: 'Jalapeno Burger',
 				description: 'Burger with jalapeno peppers and spicy mayo',
 				price: 10,
 				img: spicyJalapenoBurger,
@@ -152,7 +152,7 @@ export const menuList = [
 				type: 'Pizza',
 			},
 			{
-				name: 'Buffalo Chicken Pizza',
+				name: 'Buffalo Pizza',
 				description: 'Pizza with spicy buffalo chicken and blue cheese',
 				price: 13,
 				img: p8,
@@ -248,7 +248,7 @@ export const menuList = [
 				type: 'Donuts',
 			},
 			{
-				name: 'Caramel Crunch Donut',
+				name: 'Crunch Donut',
 				description: 'Donut coated with caramel and crunchy toppings',
 				price: 3,
 				img: d6,

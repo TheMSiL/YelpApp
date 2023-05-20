@@ -1,10 +1,9 @@
-import { useContext } from 'react';
-import { AppContext } from '../../context/DataContext';
+import useAppContext from '../../hooks/useAppContext';
 import sort from '../../assets/primary/menu/sort.svg';
 import MenuItems from './MenuItems';
 
 const Menu = () => {
-	const { currentDish } = useContext(AppContext);
+	const { currentDish } = useAppContext();
 	return (
 		<div className='menu'>
 			<div className='menu-top'>

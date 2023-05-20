@@ -11,37 +11,46 @@
     gap: 0 20px
 
   .primary
-    padding: 30px 20px 15px
+    padding: 22px 20px 15px
 
     &-header
-      align-items: center
 
-      &-tools
-        .search-input
-          &:focus
-            width: 200px
-
-    &-middle, &-footer
-      gap: 45px
+    &-footer
+      gap: 0
+      justify-content: space-between
 
     &-middle
       margin: 20px 0
+      gap: 45px
+
+      .discount
+        padding: 15px 60px 31px 22px
 
     .food-nav
       &-item
         padding: 10px 15px 10px 15px
 
+    .menu
+      &-items
+        display: grid
+        grid-template-columns: repeat(3, minmax(185px, 1fr))
+        grid-gap: 20px 35px
+        height: 350px
+        overflow: auto
+
   .title-container-main
     text-align: start
     margin-left: 20px
     margin-bottom: 5px
-    align-items: center
 
     h1
-      max-width: 523px
       font-weight: 800
-      font-size: 44px
-      line-height: 55px
+      font-size: 40px
+      line-height: 50px
 
     img
-      margin-left: 15px
+      margin-left: -115px
+      margin-bottom: -5px
+
+  .basket
+    height: 739px

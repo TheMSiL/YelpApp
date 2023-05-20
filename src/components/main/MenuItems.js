@@ -1,10 +1,11 @@
-import { useContext, useEffect, useRef, useCallback, useMemo } from 'react';
-import { AppContext } from '../../context/DataContext';
+import { useEffect, useRef, useCallback, useMemo } from 'react';
+import useAppContext from '../../hooks/useAppContext';
+
 import MenuItem from './MenuItem';
 import { menuList } from './menuList';
 
 const MenuItems = () => {
-	const { currentDish } = useContext(AppContext);
+	const { currentDish } = useAppContext();
 
 	const scrollRef = useRef(null);
 

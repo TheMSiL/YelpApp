@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
+const LOCAL_STORAGE_USER_KEY = 'user';
+
 export const AppContext = React.createContext();
 
 export const DataContext = ({ children }) => {
 	const [currentUser, setCurrentUser] = useState(
-		localStorage.getItem('user')
-			? JSON.parse(localStorage.getItem('user'))
+		localStorage.getItem(LOCAL_STORAGE_USER_KEY)
+			? JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY))
 			: null
 	);
 	const [currentDish, setCurrentDish] = useState('All');
 	const [showLoader, setShowLoader] = useState(false);
 	const [showBasket, setShowBasket] = useState(false);
 	const [basketItems, setBasketItems] = useState([]);
-	
 
 	useEffect(() => {
 		if (currentUser === null) {
-			localStorage.setItem('user', 'null');
+			localStorage.setItem(LOCAL_STORAGE_USER_KEY, null);
 		} else {
-			localStorage.setItem('user', JSON.stringify(currentUser));
+			localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(currentUser));
 		}
 	}, [currentUser]);
 

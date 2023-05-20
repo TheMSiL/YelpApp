@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import authSmile from '../assets/face.svg';
 
 const Title = ({ title, styleName }) => {
@@ -9,4 +10,4 @@ const Title = ({ title, styleName }) => {
 	);
 };
 
-export default Title;
+export default memo(Title);

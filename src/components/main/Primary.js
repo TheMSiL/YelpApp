@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import { AppContext } from '../../context/DataContext';
+import useAppContext from '../../hooks/useAppContext';
 import Title from '../Title';
 import Articles from './Articles';
 import Basket from './Basket';
@@ -9,7 +8,7 @@ import Menu from './Menu';
 import Tools from './Tools';
 
 const Primary = () => {
-	const { showBasket } = useContext(AppContext);
+	const { showBasket } = useAppContext();
 	return (
 		<div className='primary'>
 			<div className='primary-header'>

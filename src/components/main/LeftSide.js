@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import UserAvatar from './UserAvatar';
 import Navigation from './Navigation';
 import Deliver from './Deliver';
@@ -12,4 +13,4 @@ const LeftSide = () => {
 	);
 };
 
-export default LeftSide;
+export default memo(LeftSide);

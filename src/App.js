@@ -1,12 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import useAppContext from './hooks/useAppContext';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import { useContext } from 'react';
-import { AppContext } from './context/DataContext';
 import MainPage from './pages/MainPage';
 
 const PrivateRoute = ({ children }) => {
-	let { currentUser } = useContext(AppContext);
+	let { currentUser } = useAppContext();
 	if (currentUser == null) {
 		return <Navigate to='login' />;
 	}
@@ -15,7 +14,7 @@ const PrivateRoute = ({ children }) => {
 };
 
 const App = () => {
-	let { currentUser } = useContext(AppContext);
+	let { currentUser } = useAppContext();
 
 	return (
 		<div className='app-container'>

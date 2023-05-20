@@ -1,15 +1,15 @@
-import React, { useCallback, useContext, useMemo, useState } from 'react';
+import React, { useState } from 'react';
+import useAppContext from '../../hooks/useAppContext'
 import arrow from '../../assets/leftSide/arrow.svg';
 import watch from '../../assets/primary/watch.jpg';
-import { AppContext } from '../../context/DataContext';
 import BasketItem from './BasketItem';
 import { foodItems } from './FoodNav';
 
 const Basket = () => {
-	const { setShowBasket, basketItems, setBasketItems } = useContext(AppContext);
+	const { setShowBasket, basketItems, setBasketItems } = useAppContext();
 	const [isOrdered, setIsOrdered] = useState(false);
 
-	const calculateTotalPrice = useMemo(() => {
+	const calculateTotalPrice = () => {
 		let totalPrice = 0;
 		basketItems.forEach(item => {
 			if (item.quantity > 1) {
@@ -19,18 +19,18 @@ const Basket = () => {
 			}
 		});
 		return totalPrice;
-	}, [basketItems]);
+	};
 
-	const order = useCallback(() => {
+	const order = () => {
 		setIsOrdered(prev => !prev);
 		if (isOrdered) {
 			setBasketItems([]);
 		}
-	}, [isOrdered, setIsOrdered, setBasketItems]);
+	};
 
-	const changeShow = useCallback(() => {
+	const changeShow = () => {
 		setShowBasket(prev => !prev);
-	}, [setShowBasket]);
+	};
 
 	return (
 		<div className='basket'>
@@ -73,7 +73,7 @@ const Basket = () => {
 				className={basketItems.length ? 'basket-btn' : 'none'}
 				onClick={order}
 			>
-				{!isOrdered ? `Order - ${calculateTotalPrice} $` : 'Order More'}
+				{!isOrdered ? `Order - ${calculateTotalPrice()} $` : 'Order More'}
 			</button>
 		</div>
 	);

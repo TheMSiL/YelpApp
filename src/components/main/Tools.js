@@ -1,18 +1,16 @@
-import { getAuth, signOut as out } from 'firebase/auth';
-import { useCallback, useContext, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { signOut as out } from 'firebase/auth';
+import { useCallback, useState } from 'react';
 import basket from '../../assets/primary/basket.svg';
 import exit from '../../assets/primary/exit.svg';
 import search from '../../assets/primary/search.svg';
-import app from '../../base';
-import { AppContext } from '../../context/DataContext';
-
-const auth = getAuth(app);
+import { auth } from '../../base';
+import useAppContext from '../../hooks/useAppContext';
+import useNav from '../../hooks/useNav';
 
 const Tools = () => {
-	const navigate = useNavigate();
+	const { goTo } = useNav();
 	const [inputValue, setInputValue] = useState('');
-	const { setCurrentUser, setShowBasket } = useContext(AppContext);
+	const { setCurrentUser, setShowBasket } = useAppContext();
 
 	const changeShow = useCallback(() => {
 		setShowBasket(prev => !prev);
@@ -35,22 +33,13 @@ const Tools = () => {
 
 		localStorage.setItem('user', 'null');
 
-		navigate('/');
+		goTo('/');
 	};
-
-	const basketImage = useMemo(
-		() => <img className='basket-img' src={basket} alt='basket' />,
-		[]
-	);
-	const searchImage = useMemo(
-		() => <img className='search-img' src={search} alt='search' />,
-		[]
-	);
 
 	return (
 		<div className='primary-header-tools'>
-			<button className='basket-btn' onClick={changeShow}>
-				{basketImage}
+			<button className='tools-basket-btn' onClick={changeShow}>
+				<img className='basket-img' src={basket} alt='basket' />
 			</button>
 			<div className='search'>
 				<input
@@ -58,8 +47,9 @@ const Tools = () => {
 					onChange={onChange}
 					onBlur={onBlur}
 					className='search-input'
+					name='search-input'
 				/>
-				{searchImage}
+				<img className='search-img' src={search} alt='search' />
 			</div>
 			<button className='exit-btn' onClick={signOut}>
 				<img src={exit} alt='exit' />

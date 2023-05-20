@@ -1,47 +1,38 @@
-import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import useAppContext from '../../hooks/useAppContext';
+
 import fire from '../../assets/primary/fire.svg';
 import like from '../../assets/primary/menu/like.svg';
 import no from '../../assets/primary/menu/no.svg';
 import star from '../../assets/primary/menu/star.svg';
 import yes from '../../assets/primary/menu/yes.svg';
-import { AppContext } from '../../context/DataContext';
 
 const MenuItem = props => {
 	const [addDish, setAddDish] = useState(false);
-	const { setShowBasket, basketItems, setBasketItems } = useContext(AppContext);
+	const { setShowBasket, basketItems, setBasketItems } = useAppContext();
 
-	const updateBasket = useCallback(
-		isAdded => {
-			if (isAdded) {
-				const updatedBasket = basketItems.filter(
-					item => item.name !== props.name
-				);
-				setBasketItems(updatedBasket);
-			} else {
-				const newItem = {
-					name: props.name,
-					price: props.type === 'Burgers' ? props.price / 2 : props.price,
-					description: props.description,
-					type: props.type,
-				};
-				setBasketItems(prevItems => [...prevItems, newItem]);
-			}
-		},
-		[
-			basketItems,
-			props.name,
-			props.price,
-			props.description,
-			props.type,
-			setBasketItems,
-		]
-	);
+	const updateBasket = isAdded => {
+		if (isAdded) {
+			const updatedBasket = basketItems.filter(
+				item => item.name !== props.name
+			);
+			setBasketItems(updatedBasket);
+		} else {
+			const newItem = {
+				name: props.name,
+				price: props.type === 'Burgers' ? props.price / 2 : props.price,
+				description: props.description,
+				type: props.type,
+			};
+			setBasketItems(prevItems => [...prevItems, newItem]);
+		}
+	};
 
 	const isBasketEmpty = useMemo(() => basketItems.length === 0, [basketItems]);
-	const click = useCallback(() => {
+	const click = () => {
 		setAddDish(prev => !prev);
 		updateBasket(addDish);
-	}, [addDish, updateBasket]);
+	};
 
 	useEffect(() => {
 		setShowBasket(!isBasketEmpty);

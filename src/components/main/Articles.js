@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { memo } from 'react';
 import arrow from '../../assets/leftSide/arrow.svg';
 import chicken from '../../assets/primary/articles/chicken.svg';
 import cookie from '../../assets/primary/articles/cookie.svg';
@@ -30,14 +30,6 @@ const articlesContent = [
 ];
 
 const Articles = () => {
-	const renderArticle = useCallback(({ img, color, title }) => {
-		return <Article key={color} img={img} color={color} title={title} />;
-	}, []);
-
-	const articleList = useMemo(() => {
-		return articlesContent.map(renderArticle);
-	}, [renderArticle]);
-
 	return (
 		<div className='articles'>
 			<div className='articles-top'>
@@ -46,9 +38,11 @@ const Articles = () => {
 					<img src={arrow} alt='arrow' />
 				</button>
 			</div>
-			{articleList}
+			{articlesContent.map(({ img, color, title }) => {
+				return <Article key={color} img={img} color={color} title={title} />;
+			})}
 		</div>
 	);
 };
 
-export default Articles;
+export default memo(Articles);
