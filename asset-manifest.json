@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/YelpApp/static/css/main.b8df75a9.css",
-    "main.js": "/YelpApp/static/js/main.771aba38.js",
+    "main.css": "/YelpApp/static/css/main.5727cc08.css",
+    "main.js": "/YelpApp/static/js/main.98420c1a.js",
     "static/media/w1.svg": "/YelpApp/static/media/w1.ebab69d9caf56e6c309398e6d1ff1893.svg",
     "static/media/w2.svg": "/YelpApp/static/media/w2.2ffac9e176384e7f423ec06a6840e949.svg",
     "static/media/Donuts.svg": "/YelpApp/static/media/Donuts.b357aff1273abb6384c0c017b492956a.svg",
@@ -21,8 +21,10 @@
     "static/media/mask.svg": "/YelpApp/static/media/mask.79d4c1348482a6f5d281474d81a5f975.svg",
     "static/media/leaf.svg": "/YelpApp/static/media/leaf.906e7324236d76ac66a204f6d3922e28.svg",
     "static/media/grapes.svg": "/YelpApp/static/media/grapes.e6619d84c35282f0f400f58870b1e7f4.svg",
+    "static/media/1.png": "/YelpApp/static/media/1.3b1ef307dc50e8411573.png",
     "static/media/cheese.svg": "/YelpApp/static/media/cheese.d7a77dbace3b36dab0d7ea9677e52c44.svg",
     "static/media/fire.svg": "/YelpApp/static/media/fire.24b04b19974aa97fd1332f152576c76a.svg",
+    "static/media/5.png": "/YelpApp/static/media/5.19d133304033d401dedd.png",
     "static/media/orange.svg": "/YelpApp/static/media/orange.754bbb2d5ef1045921fa399c272bd795.svg",
     "static/media/star.svg": "/YelpApp/static/media/star.1ba91291424e44baee1537e1020e1ca9.svg",
     "static/media/apple.svg": "/YelpApp/static/media/apple.688bf7a12a0b4fa7a2953126e456e318.svg",
@@ -30,13 +32,11 @@
     "static/media/6.png": "/YelpApp/static/media/6.dd9ccd031d085eff422f.png",
     "static/media/4.png": "/YelpApp/static/media/4.5bc69bfe0114b936ac96.png",
     "static/media/3.png": "/YelpApp/static/media/3.fb6088cf1dfa0c0dab20.png",
-    "static/media/1.png": "/YelpApp/static/media/1.3b1ef307dc50e8411573.png",
     "static/media/d5.png": "/YelpApp/static/media/d5.bd8c1dc368c83a7509ff.png",
     "static/media/8.png": "/YelpApp/static/media/8.61fdfc41c78166d1af89.png",
     "static/media/d2.png": "/YelpApp/static/media/d2.b78e99edf4a5fa5c815e.png",
     "static/media/7.png": "/YelpApp/static/media/7.5e862edae15e1acc4486.png",
     "static/media/2.png": "/YelpApp/static/media/2.e5491fdb08a7c6e9158b.png",
-    "static/media/5.png": "/YelpApp/static/media/5.19d133304033d401dedd.png",
     "static/media/d4.png": "/YelpApp/static/media/d4.bdb0b7985456a60805fa.png",
     "static/media/d1.png": "/YelpApp/static/media/d1.61c5787a7f94879021fc.png",
     "static/media/d3.png": "/YelpApp/static/media/d3.229db3fe4d76b75e09d7.png",
@@ -51,11 +51,11 @@
     "index.html": "/YelpApp/index.html",
     "static/media/sort.svg": "/YelpApp/static/media/sort.74289f17e0e446e146651dc54ff89813.svg",
     "static/media/no.svg": "/YelpApp/static/media/no.3fd698ba19dde974447b47366eff5648.svg",
-    "main.b8df75a9.css.map": "/YelpApp/static/css/main.b8df75a9.css.map",
-    "main.771aba38.js.map": "/YelpApp/static/js/main.771aba38.js.map"
+    "main.5727cc08.css.map": "/YelpApp/static/css/main.5727cc08.css.map",
+    "main.98420c1a.js.map": "/YelpApp/static/js/main.98420c1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8df75a9.css",
-    "static/js/main.771aba38.js"
+    "static/css/main.5727cc08.css",
+    "static/js/main.98420c1a.js"
   ]
 }
