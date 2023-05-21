@@ -1,5 +1,13 @@
 @import vars
 
+@keyframes slideDown
+	0%
+		opacity: 0
+		transform: translateY(-100px)
+	100%
+		opacity: 1
+		transform: translateY(0)
+
 .burger-menu
 	display: none
 
@@ -29,6 +37,7 @@
 			transform: rotate(-45deg)
 
 	.burger-nav
+		animation: slideDown 0.7s linear
 		display: flex
 		flex-direction: column
 		justify-content: center

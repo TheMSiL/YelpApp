@@ -14,14 +14,14 @@ $cubic: cubic-bezier(0.42, 0, 0.58, 1)
 		transform: translateX(0)
 
 	100%
-		transform: translateX(60%)
+		transform: translateX(100%)
 
 @keyframes slideLeft
 	0%
 		transform: translateX(0)
 
 	100%
-		transform: translateX(-60%)
+		transform: translateX(-100%)
 
 .loader
 	padding-top: 400px
@@ -40,14 +40,14 @@ $cubic: cubic-bezier(0.42, 0, 0.58, 1)
 	&-right
 		position: absolute
 		height: 100%
-		width: 50%
+		width: 51%
 		right: 0
 		top: 0
 		background: $backDiv
 		border-top-right-radius: 40px
 		border-bottom-right-radius: 40px
-		animation: slideRight 1.6s $cubic
-		animation-delay: 1.3s
+		animation: slideRight 1.25s $cubic
+		animation-delay: 1.25s
 
 	&-left
 		position: absolute
@@ -58,8 +58,8 @@ $cubic: cubic-bezier(0.42, 0, 0.58, 1)
 		background: $backDiv
 		border-top-left-radius: 40px
 		border-bottom-left-radius: 40px
-		animation: slideLeft 1.6s $cubic
-		animation-delay: 1.3s
+		animation: slideLeft 1.25s $cubic
+		animation-delay: 1.25s
 
 	&-title
 		font-weight: 800
@@ -77,7 +77,7 @@ $cubic: cubic-bezier(0.42, 0, 0.58, 1)
 
 	&-grapes
 		position: absolute
-		bottom: 140px
+		bottom: 285px
 		left: 440px
 
 	&-apple
@@ -97,10 +97,10 @@ $cubic: cubic-bezier(0.42, 0, 0.58, 1)
 
 	&-burger
 		position: absolute
-		top: 230px
-		right: 400px
+		top: 160px
+		right: 355px
 
 	&-cheese
 		position: absolute
 		top: 390px
-		right: 460px
+		right: 480px

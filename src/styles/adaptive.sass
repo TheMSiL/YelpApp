@@ -1,4 +1,5 @@
-@media (max-width: 1440px)
+@media (max-width: 1460px)
+
   .app-container
     max-width: 1200px
     margin: 20px auto
@@ -9,6 +10,29 @@
   .main-page_container
     padding: 15px 30px 20px 15px
     gap: 0 20px
+
+    .loader
+      padding-top: 350px
+
+      &-grapes
+        bottom: 40px
+        left: 300px
+      &-cheese
+        top: 355px
+        right: 345px
+      &-orange
+        top: 310px
+        right: 470px
+      &-apple
+        top: 270px
+        right: 520px
+      &-burger
+        top: 140px
+        right: 245px
+
+      &-fire
+        top: 260px
+        right: 480px
 
   .primary
     padding: 22px 20px 15px
@@ -82,7 +106,7 @@
         h1
           max-width: 320px
           font-weight: 800
-          font-size: 44px
+          font-size: 38px
           line-height: 60px
         img
           margin-left: -40px
@@ -90,6 +114,36 @@
     .main-page_container
       padding: 15px 0px 20px 25px
       gap: 0 35px
+
+      .loader
+        padding-top: 300px
+
+        &-right
+          width: 51%
+
+        &-grapes
+          bottom: 90px
+          left: 220px
+
+        &-cheese
+          top: 290px
+          right: 250px
+
+        &-orange
+          top: 240px
+          right: 370px
+
+        &-apple
+          top: 200px
+          right: 410px
+
+        &-burger
+          top: 75px
+          right: 150px
+
+        &-fire
+          top: 210px
+          right: 385px
 
     .discount
       display: none
@@ -176,8 +230,55 @@
   .app-container
     max-width: 750px
 
+    .auth-page_container
+      padding: 55px 0 75px
+
+      .title-container-auth
+        h1
+          font-size: 42px
+          line-height: 58px
+        img
+          width: 7%
+          margin-left: -50px
+
+      .leaf
+        width: 10%
+
+      .grapes, .orange, .apple
+        width: 15%
+
+      .apple
+        left: 0
+
     .main-page_container
       flex-direction: column
+
+      .loader
+        padding-top: 250px
+
+        &-grapes
+          bottom: 120px
+          left: 90px
+
+        &-cheese
+          top: 240px
+          right: 130px
+
+        &-orange
+          top: 195px
+          right: 250px
+
+        &-apple
+          top: 155px
+          right: 290px
+
+        &-burger
+          top: 25px
+          right: 30px
+
+        &-fire
+          top: 150px
+          right: 265px
 
       .left_side-container
         max-width: 690px
@@ -248,10 +349,61 @@
   .app-container
     max-width: 600px
 
+    .auth-page_container
+
+      .title-container-auth
+        h1
+          font-size: 36px
+          line-height: 48px
+        img
+          width: 8%
+          margin-left: -60px
+
+      .auth-form
+        max-width: 400px
+        padding: 50px 0 40px
+        &_label
+          max-width: 320px
+        &_input
+          max-width: 320px
+
     .main-page_container
       padding: 15px 0 20px
       max-width: 550px
       margin: 0 auto
+
+      .loader
+
+        &-title
+          font-size: 48px
+          line-height: 54px
+          margin-bottom: 15px
+
+        &-text
+          line-height: 48px
+
+        &-grapes
+          bottom: 160px
+          left: 40px
+
+        &-cheese
+          top: 235px
+          right: 100px
+
+        &-orange
+          top: 205px
+          right: 220px
+
+        &-apple
+          top: 170px
+          right: 240px
+
+        &-burger
+          top: 20px
+          right: 0px
+
+        &-fire
+          right: 232px
 
       .left_side-container
         flex-direction: row
@@ -293,3 +445,95 @@
           height: 468px
 
 @media (max-width: 650px)
+  .app-container
+    max-width: 420px
+
+    .auth-page_container
+      .title-container-auth
+        h1
+          font-size: 32px
+          line-height: 44px
+          max-width: 288px
+      .auth-form
+        max-width: 350px
+        padding: 35px 0 20px
+
+      .grapes
+        width: 20%
+        left: 5px
+
+      .leaf
+        width: 13%
+        top: 8px
+
+      .orange, .apple
+        width: 20%
+
+    .main-page_container
+      padding: 15px 10px 20px
+
+      .loader
+        &-title
+          font-size: 42px
+          line-height: 48px
+
+        &-text
+          font-size: 22px
+          line-height: 36px
+
+        &-grapes
+          width: 40%
+          bottom: 240px
+          left: 0
+
+        &-cheese
+          right: 45px
+
+        &-orange
+          top: 205px
+          right: 155px
+
+        &-apple
+          top: 165px
+          right: 180px
+
+        &-burger
+          right: -65px
+
+        &-fire
+          top: 170px
+          right: 170px
+
+      .left_side-container
+        margin-bottom: 10px
+        padding: 0 10px
+
+      .burger-menu
+        .burger-nav
+          width: 400px
+          height: 505px
+          top: 70px
+          right: 10px
+
+      .primary
+        .title-container-main
+          h1
+            max-width: 260px
+          img
+            margin-left: -135px
+            margin-bottom: 5px
+            width: 15%
+
+        .primary-middle
+
+          .food-nav
+            gap: 10px
+
+            &-item
+              padding: 10px
+              img
+                width: 30px
+                height: 30px
+        .basket
+          height: 488px
+          width: 400px

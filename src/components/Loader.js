@@ -2,7 +2,7 @@ import grapes from '../assets/auth/grapes.svg';
 import apple from '../assets/loader/apple.svg';
 import cheese from '../assets/loader/cheese.svg';
 import orange from '../assets/loader/orange.svg';
-import burger from '../assets/primary/burger.svg';
+import burger from '../assets/loader-burger.svg';
 import fire from '../assets/primary/fire.svg';
 
 const Loader = () => {
