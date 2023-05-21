@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/YelpApp/static/css/main.607c1424.css",
-    "main.js": "/YelpApp/static/js/main.05b152a6.js",
+    "main.css": "/YelpApp/static/css/main.2e23616b.css",
+    "main.js": "/YelpApp/static/js/main.f8209927.js",
     "static/media/w1.svg": "/YelpApp/static/media/w1.ebab69d9caf56e6c309398e6d1ff1893.svg",
     "static/media/w2.svg": "/YelpApp/static/media/w2.2ffac9e176384e7f423ec06a6840e949.svg",
     "static/media/Donuts.svg": "/YelpApp/static/media/Donuts.b357aff1273abb6384c0c017b492956a.svg",
@@ -9,6 +9,7 @@
     "static/media/deliver.svg": "/YelpApp/static/media/deliver.34e34232600edbda0a8360bd2520ad37.svg",
     "static/media/Salads.svg": "/YelpApp/static/media/Salads.78a0b8064b32472be574fb04ca890c3e.svg",
     "static/media/pizza.svg": "/YelpApp/static/media/pizza.2827a21fc765bbccbbc29646c6c94373.svg",
+    "static/media/loader-burger.svg": "/YelpApp/static/media/loader-burger.4340464ea920ebdba096b8d96a6f17f7.svg",
     "static/media/burger.svg": "/YelpApp/static/media/burger.b577c38119100da953832a48460117c5.svg",
     "static/media/Burgers.svg": "/YelpApp/static/media/Burgers.6c657f7dd3bbaee9737c7caa03c5e4bc.svg",
     "static/media/cookie.svg": "/YelpApp/static/media/cookie.83957ecc9ce27509d7e5826071406ec0.svg",
@@ -51,11 +52,11 @@
     "index.html": "/YelpApp/index.html",
     "static/media/sort.svg": "/YelpApp/static/media/sort.74289f17e0e446e146651dc54ff89813.svg",
     "static/media/no.svg": "/YelpApp/static/media/no.3fd698ba19dde974447b47366eff5648.svg",
-    "main.607c1424.css.map": "/YelpApp/static/css/main.607c1424.css.map",
-    "main.05b152a6.js.map": "/YelpApp/static/js/main.05b152a6.js.map"
+    "main.2e23616b.css.map": "/YelpApp/static/css/main.2e23616b.css.map",
+    "main.f8209927.js.map": "/YelpApp/static/js/main.f8209927.js.map"
   },
   "entrypoints": [
-    "static/css/main.607c1424.css",
-    "static/js/main.05b152a6.js"
+    "static/css/main.2e23616b.css",
+    "static/js/main.f8209927.js"
   ]
 }
