@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from './Icon';
 
-const list = [
+export const list = [
 	{ name: 'Home', svgName: 'home' },
 	{ name: 'Menu', svgName: 'menu' },
 	{ name: 'Trending', svgName: 'trending' },
@@ -15,6 +15,7 @@ const Navigation = () => {
 		setActive(list.find(x => x.name === name));
 	};
 	return (
+		<>
 		<div className='nav'>
 			{list.map(({ name, svgName }) => {
 				return (
@@ -33,6 +34,7 @@ const Navigation = () => {
 				);
 			})}
 		</div>
+		</>
 	);
 };
 

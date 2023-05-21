@@ -1,0 +1,53 @@
+@import vars
+
+.burger-menu
+	display: none
+
+	.burger-default, .burger-default_change
+		width: 40px
+		height: 40px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		gap: 2px
+
+		&--1, &--2, &--3
+			display: block
+			width: 20px
+			height: 2.5px
+			background: black
+
+	.burger-default_change
+		gap: 0
+		&--1
+			transform: rotate(45deg)
+			margin-bottom: -2px
+		&--2
+			display: none
+		&--3
+			transform: rotate(-45deg)
+
+	.burger-nav
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		gap: 25px
+		position: absolute
+		z-index: 99
+		top: 79px
+		right: 25px
+		background: $bright-white
+		width: 550px
+		height: 467px
+		border-radius: 35px
+
+		&-li
+			display: block
+			font-weight: 700
+			cursor: pointer
+			transition: 0.4s ease
+
+			&:hover
+				color: $btn-Bluebackground
