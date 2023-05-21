@@ -4,7 +4,7 @@
     margin: 20px auto
 
   .auth-page_container
-    padding: 150px 0 250px
+    padding: 100px 0 160px
 
   .main-page_container
     padding: 15px 30px 20px 15px
@@ -54,3 +54,193 @@
 
   .basket
     height: 739px
+
+@media (max-width: 1366px)
+  .app-container
+    max-width: 1000px
+    margin: 20px auto
+
+    .auth-page_container
+      padding: 65px 0 75px
+
+      .leaf
+        position: absolute
+        top: 5px
+        right: 15px
+        width: 15%
+
+      .grapes, .orange
+        width: 20%
+
+      .apple
+        bottom: 0
+
+      .auth-form
+        max-width: 500px
+
+      .title-container-auth
+        h1
+          max-width: 320px
+          font-weight: 800
+          font-size: 44px
+          line-height: 60px
+        img
+          margin-left: -40px
+
+    .main-page_container
+      padding: 15px 0px 20px 25px
+      gap: 0 35px
+
+    .discount
+      display: none
+
+    .apple
+      bottom: 70px
+      left: 50px
+
+  .left_side-container
+    justify-content: normal
+    gap: 30px
+
+    .deliver
+      margin-top: 130px
+      padding-top: 0
+      >img
+        top: -155px
+      .deliver-info
+        padding: 30px 12px 11px
+        &_text
+          margin-right: 82px
+
+  .title-container-main
+    text-align: start
+    margin-left: 0px
+    margin-bottom: 5px
+
+    h1
+      font-weight: 800
+      font-size: 34px
+      line-height: 40px
+
+    img
+      margin-left: -135px
+      margin-bottom: 0px
+      width: 15%
+
+  .primary-header-tools .search-input
+    &:focus
+      width: 180px
+      gap: 50px
+
+  .food-nav
+    &-text
+      display: none
+
+  .primary
+    padding: 22px 45px 15px
+
+    .primary-footer
+      flex-direction: column-reverse
+
+      .articles
+        justify-content: space-around
+        max-width: 627px
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 25px
+
+        &-top
+          gap: 487px
+          justify-content: space-between
+
+        &-item
+          gap: 25px
+
+          &:nth-child(3)
+            display: none
+
+          &:nth-child(2)
+            display: none
+
+      .menu
+        &-items
+          grid-template-columns: repeat(3, 1fr)
+          height: 214px
+          gap: 15px 25px
+
+    .basket
+      height: 675px
+
+@media (max-width: 1050px)
+
+  .app-container
+    max-width: 750px
+
+    .main-page_container
+      flex-direction: column
+
+      .left_side-container
+        max-width: 690px
+        flex-direction: row
+        align-items: flex-start
+
+      .deliver
+        display: none
+
+      .nav
+        display: flex
+        gap: 10px
+        &-link
+          width: 130px
+
+          span
+            margin-left: 15px
+
+      .avatar
+        display: flex
+        align-items: center
+        &-box
+          margin: 0 15px 0 0
+          width: 44px
+          height: 44px
+          padding: 2px
+        &-name
+          margin-left: 0
+
+    .search
+      display: none
+
+    .title-container-main
+      h1
+        font-size: 26px
+        line-height: 40px
+      img
+        margin-left: 5px
+        margin-bottom: 0px
+        width: 10%
+
+    .exit-btn, .tools-basket-btn, .articles-btn
+      width: 40px
+      height: 40px
+
+    .articles-item
+      margin-top: 10px
+
+      &-imgBox
+        height: 50px
+        width: 50px
+
+      &-contentBox
+
+      &-title
+        max-width: 250px
+
+    .primary
+      padding: 20px 25px 15px
+      max-width: 690px
+
+      .basket
+        height: 595px
+      
+      .menu-items
+        height: 230px
