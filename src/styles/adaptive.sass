@@ -450,10 +450,14 @@
 
     .auth-page_container
       .title-container-auth
+        max-width: 288px
+        margin: 0 auto 18px
+
         h1
           font-size: 32px
           line-height: 44px
           max-width: 288px
+
       .auth-form
         max-width: 350px
         padding: 35px 0 20px
@@ -537,3 +541,121 @@
         .basket
           height: 488px
           width: 400px
+
+@media (max-width: 450px)
+  .app-container
+    max-width: 350px
+
+    .auth-page_container
+
+      .title-container-auth
+        max-width: 275px
+        margin: 0 auto 18px
+
+        h1
+          font-size: 30px
+          line-height: 42px
+          max-width: 260px
+
+        img
+          position: absolute
+          right: 70px
+          width: 9%
+
+      .auth-form
+        width: 280px
+        padding: 35px 15px 20px
+
+        &_input
+          width: 250px
+
+        &_btn
+          width: 150px
+
+    .main-page_container
+      .burger-menu
+        .burger-nav
+          width: 330px
+
+      .loader
+        padding-top: 200px
+
+        &-title
+          font-size: 36px
+          line-height: 42px
+
+        &-text
+          font-size: 20px
+          line-height: 32px
+
+        &-grapes
+          width: 35%
+          bottom: 340px
+
+        &-cheese
+          top: 210px
+          right: 30px
+
+        &-orange
+          top: 170px
+          right: 95px
+
+        &-apple
+          top: 150px
+          width: 15%
+          right: 120px
+
+        &-burger
+          width: 50%
+          top: 90px
+          right: -10px
+
+        &-fire
+          top: 150px
+          right: 110px
+
+      .primary
+        padding: 19px 10px 20px
+
+        .title-container-main
+          max-width: 190px
+
+          h1
+            max-width: 190px
+
+          img
+            position: absolute
+            margin-left: 0
+            margin-bottom: 0
+            left: 135px
+            width: 10%
+
+        .primary-middle
+          .food-nav
+            gap: 5px
+            &-item
+              padding: 8px
+
+        .tools-basket-btn
+          margin-right: 10px
+
+        .menu-items
+          grid-template-columns: 1fr
+
+        .basket
+          width: 330px
+          padding: 26px 15px 34px 15px
+
+          .basket-item-info-title
+            font-size: 11px
+            margin-right: 0
+
+          .basket-item-info-text
+            max-width: 120px
+
+          .basket-item-info-amount
+            margin-right: 13px
+
+          .watch
+            img
+              width: 40%
