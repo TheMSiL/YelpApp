@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/YelpApp/static/css/main.5e55b8e4.css",
+    "main.css": "/YelpApp/static/css/main.a687ae92.css",
     "main.js": "/YelpApp/static/js/main.f8209927.js",
     "static/media/w1.svg": "/YelpApp/static/media/w1.ebab69d9caf56e6c309398e6d1ff1893.svg",
     "static/media/w2.svg": "/YelpApp/static/media/w2.2ffac9e176384e7f423ec06a6840e949.svg",
@@ -52,11 +52,11 @@
     "index.html": "/YelpApp/index.html",
     "static/media/sort.svg": "/YelpApp/static/media/sort.74289f17e0e446e146651dc54ff89813.svg",
     "static/media/no.svg": "/YelpApp/static/media/no.3fd698ba19dde974447b47366eff5648.svg",
-    "main.5e55b8e4.css.map": "/YelpApp/static/css/main.5e55b8e4.css.map",
+    "main.a687ae92.css.map": "/YelpApp/static/css/main.a687ae92.css.map",
     "main.f8209927.js.map": "/YelpApp/static/js/main.f8209927.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e55b8e4.css",
+    "static/css/main.a687ae92.css",
     "static/js/main.f8209927.js"
   ]
 }
