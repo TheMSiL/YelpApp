@@ -18,13 +18,14 @@
 		flex-direction: column
 		align-items: center
 		justify-content: center
-		gap: 2px
+		gap: 3px
 
 		&--1, &--2, &--3
 			display: block
 			width: 20px
-			height: 2.5px
+			height: 3px
 			background: black
+			transition: 0.5s transform ease-in-out
 
 	.burger-default_change
 		gap: 0
@@ -35,9 +36,10 @@
 			display: none
 		&--3
 			transform: rotate(-45deg)
+			margin-top: -1px
 
 	.burger-nav
-		animation: slideDown 0.7s linear
+		animation: slideDown 0.5s linear
 		display: flex
 		flex-direction: column
 		justify-content: center
@@ -49,7 +51,7 @@
 		right: 25px
 		background: $bright-white
 		width: 550px
-		height: 467px
+		height: 530px
 		border-radius: 35px
 
 		&-li

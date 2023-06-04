@@ -2,7 +2,7 @@
 
   .app-container
     max-width: 1200px
-    margin: 20px auto
+    margin: 35px auto 20px
 
   .auth-page_container
     padding: 100px 0 160px
@@ -38,13 +38,21 @@
     padding: 22px 20px 15px
 
     &-header
+      .title-container-main
+        align-items: flex-start
 
+      .search-input
+        &:focus
+          width: 200px
     &-footer
       gap: 0
       justify-content: space-between
 
+      .articles-item
+        margin-top: 15px
+
     &-middle
-      margin: 20px 0
+      margin: 15px 0
       gap: 45px
 
       .discount
@@ -59,7 +67,7 @@
         display: grid
         grid-template-columns: repeat(3, minmax(185px, 1fr))
         grid-gap: 20px 35px
-        height: 350px
+        height: 330px
         overflow: auto
 
   .title-container-main
@@ -68,16 +76,36 @@
     margin-bottom: 5px
 
     h1
+      max-width: 460px
       font-weight: 800
-      font-size: 40px
-      line-height: 50px
+      font-size: 38px
+      line-height: 46px
 
     img
-      margin-left: -115px
-      margin-bottom: -5px
+      right: 385px
+      top: 10px
 
   .basket
-    height: 739px
+    height: 664px
+
+  .avatar
+    padding-top: 5px
+    margin-bottom: 10px
+    &-name
+      margin-left: 0
+    &-box
+      margin: 0 auto 13px
+
+  .nav-link
+    span
+      margin-left: 30px
+
+  .deliver
+    margin-top: 40px
+    img
+      top: -35px
+    &-info
+      padding: 60px 12px 11px 26px
 
 @media (max-width: 1366px)
   .app-container
@@ -112,9 +140,11 @@
           margin-left: -40px
 
     .main-page_container
-      padding: 15px 0px 20px 25px
-      gap: 0 35px
+      padding: 15px 20px 20px 25px
 
+      .primary
+        &-header-tools
+          margin-left: 145px
       .loader
         padding-top: 300px
 
@@ -162,7 +192,9 @@
       >img
         top: -155px
       .deliver-info
-        padding: 30px 12px 11px
+        padding: 40px 12px 11px
+        &_title
+          margin-bottom: 22px
         &_text
           margin-right: 82px
 
@@ -173,13 +205,14 @@
 
     h1
       font-weight: 800
-      font-size: 34px
-      line-height: 40px
+      font-size: 32px
+      line-height: 38px
 
     img
-      margin-left: -135px
-      margin-bottom: 0px
-      width: 15%
+      position: absolute
+      right: 290px
+      top: 10px
+      width: 7%
 
   .primary-header-tools .search-input
     &:focus
@@ -191,20 +224,23 @@
       display: none
 
   .primary
-    padding: 22px 45px 15px
+    padding: 22px 20px 15px
+
+    .primary-middle
+      margin: 25px 0 15px
 
     .primary-footer
       flex-direction: column-reverse
 
       .articles
         justify-content: space-around
-        max-width: 627px
+        max-width: 707px
         display: flex
         flex-wrap: wrap
         margin-bottom: 25px
 
         &-top
-          gap: 487px
+          gap: 570px
           justify-content: space-between
 
         &-item
@@ -219,11 +255,14 @@
       .menu
         &-items
           grid-template-columns: repeat(3, 1fr)
-          height: 214px
+          height: 230px
           gap: 15px 25px
 
     .basket
-      height: 675px
+      height: 662px
+
+    .search
+      display: none
 
 @media (max-width: 1050px)
 
@@ -285,6 +324,17 @@
         flex-direction: row
         align-items: flex-start
 
+      .articles
+        justify-content: space-between
+        max-width: 640px
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 25px
+
+        &-top
+          gap: 510px
+          justify-content: space-between
+
       .deliver
         display: none
 
@@ -308,17 +358,10 @@
         &-name
           margin-left: 0
 
-    .search
-      display: none
-
     .title-container-main
       h1
         font-size: 26px
         line-height: 40px
-      img
-        margin-left: 5px
-        margin-bottom: 0px
-        width: 10%
 
     .exit-btn, .tools-basket-btn, .articles-btn
       width: 40px
@@ -338,8 +381,11 @@
       padding: 20px 25px 15px
       max-width: 690px
 
+      .primary-header-tools
+        margin-left: 0
+
       .basket
-        height: 610px
+        height: 600px
 
       .menu-items
         height: 230px
@@ -348,6 +394,7 @@
 
   .app-container
     max-width: 600px
+    margin: 50px auto
 
     .auth-page_container
 
@@ -368,7 +415,7 @@
           max-width: 320px
 
     .main-page_container
-      padding: 15px 0 20px
+      padding: 30px 0 40px
       max-width: 550px
       margin: 0 auto
 
@@ -421,12 +468,17 @@
         h1
           font-size: 24px
           line-height: 36px
+        img
+          right: 195px
+          top: 20px
 
       .primary
         max-width: 550px
+        padding: 25px 25px 20px
         .primary-middle
           justify-content: center
           .food-nav
+            margin: 20px 0
             max-width: 550px
             gap: 23px
             &-item
@@ -442,7 +494,7 @@
             grid-template-columns: repeat(2, 1fr)
 
         .basket
-          height: 468px
+          height: 507px
 
 @media (max-width: 650px)
   .app-container
@@ -515,7 +567,7 @@
       .burger-menu
         .burger-nav
           width: 400px
-          height: 488px
+          height: 523px
           top: 70px
           right: 10px
 
@@ -524,10 +576,9 @@
           h1
             max-width: 260px
           img
-            margin-left: -135px
-            margin-bottom: 5px
-            width: 15%
-
+            right: 215px
+            top: 55px
+            width: 9%
         .primary-middle
 
           .food-nav
@@ -539,7 +590,7 @@
                 width: 30px
                 height: 30px
         .basket
-          height: 488px
+          height: 528px
           width: 400px
 
 @media (max-width: 450px)
@@ -629,10 +680,11 @@
               max-width: 160px
 
             img
-              margin-left: 5px
-              margin-bottom: 0
-              width: 15%
+              right: 145px
+              width: 10%
 
+          .primary-header-tools
+            gap: 5px
         .primary-middle
           .food-nav
             gap: 5px
@@ -656,6 +708,7 @@
             right: 30px
 
         .basket
+          height: 517px
           width: 330px
           padding: 26px 15px 34px 15px
 
