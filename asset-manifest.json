@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/YelpApp/static/css/main.251c007a.css",
-    "main.js": "/YelpApp/static/js/main.f4ac2cc4.js",
+    "main.css": "/YelpApp/static/css/main.91b45e0d.css",
+    "main.js": "/YelpApp/static/js/main.4db88981.js",
     "static/media/w1.svg": "/YelpApp/static/media/w1.ebab69d9caf56e6c309398e6d1ff1893.svg",
     "static/media/w2.svg": "/YelpApp/static/media/w2.2ffac9e176384e7f423ec06a6840e949.svg",
     "static/media/Donuts.svg": "/YelpApp/static/media/Donuts.b357aff1273abb6384c0c017b492956a.svg",
@@ -52,11 +52,11 @@
     "index.html": "/YelpApp/index.html",
     "static/media/sort.svg": "/YelpApp/static/media/sort.74289f17e0e446e146651dc54ff89813.svg",
     "static/media/no.svg": "/YelpApp/static/media/no.3fd698ba19dde974447b47366eff5648.svg",
-    "main.251c007a.css.map": "/YelpApp/static/css/main.251c007a.css.map",
-    "main.f4ac2cc4.js.map": "/YelpApp/static/js/main.f4ac2cc4.js.map"
+    "main.91b45e0d.css.map": "/YelpApp/static/css/main.91b45e0d.css.map",
+    "main.4db88981.js.map": "/YelpApp/static/js/main.4db88981.js.map"
   },
   "entrypoints": [
-    "static/css/main.251c007a.css",
-    "static/js/main.f4ac2cc4.js"
+    "static/css/main.91b45e0d.css",
+    "static/js/main.4db88981.js"
   ]
 }
