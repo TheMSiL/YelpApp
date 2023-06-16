@@ -6,8 +6,8 @@ import { useFormik } from 'formik';
 import { NavLink } from 'react-router-dom';
 import * as Yup from 'yup';
 import { auth } from '../../base';
-import useNav from '../../hooks/useNav';
 import useAppContext from '../../hooks/useAppContext';
+import useNav from '../../hooks/useNav';
 import CustomInput from './CustomInput';
 
 const validationSchema = Yup.object({
@@ -41,10 +41,7 @@ const AuthForm = props => {
 	const { goTo } = useNav();
 	const { setCurrentUser, setShowLoader } = useAppContext();
 
-	const onSubmit = async ({ email, password, isValid, resetForm }) => {
-		if (isValid) {
-			setStatus(`Your email ${email} and your password ${password}`);
-		}
+	const onSubmit = async ({ email, password, resetForm }) => {
 		if (props.isShown) {
 			try {
 				await createUserWithEmailAndPassword(auth, email, password);
@@ -80,7 +77,6 @@ const AuthForm = props => {
 		touched,
 		isValid,
 		resetForm,
-		setStatus,
 	} = useFormik({
 		initialValues,
 		validationSchema,
