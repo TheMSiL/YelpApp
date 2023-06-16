@@ -4,11 +4,11 @@ const LOCAL_STORAGE_USER_KEY = 'user';
 
 export const AppContext = React.createContext();
 
-const keyData = localStorage.getItem(LOCAL_STORAGE_USER_KEY);
-
 export const DataContext = ({ children }) => {
 	const [currentUser, setCurrentUser] = useState(
-		keyData ? JSON.parse(keyData) : null
+		localStorage.getItem(LOCAL_STORAGE_USER_KEY)
+			? JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY))
+			: null
 	);
 	const [currentDish, setCurrentDish] = useState('All');
 	const [showLoader, setShowLoader] = useState(false);
